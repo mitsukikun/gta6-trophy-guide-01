@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Unofficial fan guide</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="sub">Every one of the 55 official trophies — what to do, where, how, and what can be missed — with a tracker that saves your progress in this browser.</p>
+    <div class="progress-wrap" role="status" aria-label="Trophy progress">
+      <div class="progress-line"><span id="progressText">0 of 55 earned</span><span id="progressPct">0%</span></div>
+      <div class="progress-bar"><div id="progressFill"></div></div>
+      <p class="progress-sub" id="progressSub">1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze &middot; 28 hidden until earned</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="card warn" id="missableBox">
+    <h2>Read this first: the one missable trophy</h2>
+    <p><strong>Positive Mental Attitude</strong> (meditate at every spot) is the only trophy launch guides flag as possibly missable: the meditation spot on Lucia&rsquo;s balcony in Chapter 1 disappears after that chapter. There is <strong>no mission replay</strong> reported for this game, so keep a <strong>manual save at the start of every chapter</strong> and one more right before the final mission. Everything else can be earned after the story. Turning on a cheat disables trophies — finish the hunt before touching cheats.</p>
+    <p class="src">Sources: <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — GTA 6 Trophy List</a> (PowerPyx / GTABase flag the missable spot; no mission replay) &middot; <a href="https://cryptogames.gg/gta-6-trophies-achievements-full-list/">CryptoGames — Full List and Hard Ones</a> &middot; <a href="https://www.planetgta6.com/en/gta-6-trophies/">Planet GTA 6</a> (cheats disable trophies, via PowerPyx)</p>
+  </section>
+
+  <section class="card" id="roadmap">
+    <h2>Roadmap to the platinum</h2>
+    <p class="muted">Seven stages, in the order to play them. Around 200 hours for the platinum; the story alone takes about 60.</p>
+    <ol class="roadmap" id="roadmapList"></ol>
+  </section>
+
+  <section class="controls card" id="controls" aria-label="Tracker controls">
+    <div class="controls-row">
+      <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+      <label>Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="spoiler">
+        <input id="spoiler" type="checkbox" checked>
+        Hide story spoilers (hidden trophies stay secret until earned)
+      </label>
+    </div>
+    <div class="chips" id="kindChips" role="group" aria-label="Filter by kind"></div>
+    <div class="controls-row">
+      <button id="export" type="button">Export progress (.json)</button>
+      <label class="import">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+      <button id="reset" type="button">Reset progress</button>
+      <span class="muted" id="filterCount"></span>
+    </div>
+  </section>
+
+  <section aria-label="Trophy checklist">
+    <p class="muted" id="emptyState" hidden>No trophies match these filters. There are no online trophies — all 55 are single-player and offline.</p>
+    <div class="trophy-list" id="trophyList"></div>
+  </section>
+
+  <section class="card" id="about">
+    <h2>About this guide</h2>
+    <p>Trophy names, descriptions and grades are the official list as PlayStation publishes it, reported 18 November 2026 from Exophase and cross-checked with PSNProfiles and TrueAchievements. Guide text is written for this entry, in our own words — every trophy cites its sources beside its guide, so you can see where each fact comes from. Counts the game tracks (42 Shooting Range challenges, 14 drone-race locations, 18 meditation spots, 52 areas, 9 gangs, 8 garages) are the counts PlayStation lists, as reported by Exophase and PSNProfiles.</p>
+    <p class="src">Full lists: <a href="https://www.planetgta6.com/en/gta-6-trophies/">Planet GTA 6 — GTA 6 Trophies</a> &middot; <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — Trophy List</a> &middot; <a href="https://cryptogames.gg/gta-6-trophies-achievements-full-list/">CryptoGames — Full List</a> &middot; <a href="https://gtasix.how/trophies/">GTA Six How — The Full List</a></p>
+    <p class="muted">Unofficial fan guide. Not affiliated with Rockstar Games, Take-Two Interactive or Sony Interactive Entertainment. No official artwork or logos are used; the design is our own. Progress is stored only in your browser (localStorage) unless you export it.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Leonida Trophy Guide &middot; GTA VI trophy tracker &middot; data: official 55-trophy list, 18 Nov 2026</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
