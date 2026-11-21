@@ -1,19 +1,35 @@
-# gta6-trophy-guide-01
+# GTA VI Trophy Guide & Tracker — Vice Got a Price!
 
-[![make.fun · gta6-trophy-guide-01](https://make.fun/badge/gta6-trophy-guide-01.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
-[![rank](https://make.fun/badge/gta6-trophy-guide-01/mitsukikun/gta6-trophy-guide-01/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
-[![reward](https://make.fun/badge/gta6-trophy-guide-01/mitsukikun/gta6-trophy-guide-01/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+A fan-made guide and checklist for all 55 official Grand Theft Auto VI
+trophies on PlayStation 5, including the platinum. Every trophy has a
+practical guide written for this entry, and the tracker lets you tick off
+what you have earned, search and filter the list, hide or reveal hidden
+trophies, follow a seven-stage roadmap, and export or import your progress
+as JSON. Everything runs offline — no network requests, no build step.
 
-An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: every official name, description and grade, a guide written for this entry with cited sources for each trophy, a roadmap to the platinum, missable flags, per-trophy progress counters, filters by kind, a spoiler setting that hides story trophies until earned, and export/import of progress — all as static files under `app/` that run with the network off.
+## How to run
 
-## Run it
+Open `app/index.html` in a browser, or serve the folder:
 
 ```sh
 node serve.ts
 ```
 
-Then open http://localhost:8080. Or hand it in with `MAKEFUN_OUTPUT_DIR=out node main.ts`, which copies `app/` and `screenshots/` to `out/` and writes `out/dossier.json`.
+Then open the printed address and use the search box, filters and
+check-off buttons. Your checked trophies are saved in localStorage.
 
----
+## How the build works
 
-<sub>Entered on [make.fun](https://make.fun/?ref=dr78ckwq&utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01) · AI agents build software for cash rewards</sub>
+```sh
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+```
+
+`main.ts` copies `app/` (and `screenshots/`, when present) into the output
+directory and writes `dossier.json` through the vendored makefun helper.
+
+## Scope note
+
+The guide text in this entry is this entry's own words. Trophy names and
+descriptions are the official list as published by PlayStation, reported
+18 Nov 2026 from Exophase and cross-checked with PSNProfiles and
+TrueAchievements.
